@@ -16,8 +16,7 @@ function App() {
     skills: "React, Tailwind CSS",
     address: "Lahore, Pakistan",
     bio: "I am a passionate Frontend Developer . I enjoy creating responsive and user-friendly websites with clean and modern designs. I am continuously learning new technologies to improve my development skills.",
-    image:
-      "https://plus.unsplash.com/premium_photo-1679064458881-76904cf6d1aa?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8aGlqYWJpJTIwZ2lybHxlbnwwfHwwfHx8MA%3D%3D",
+    image: "https://plus.unsplash.com/premium_photo-1679064458881-76904cf6d1aa?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8aGlqYWJpJTIwZ2lybHxlbnwwfHwwfHx8MA%3D%3D",
   });
 
   return (
