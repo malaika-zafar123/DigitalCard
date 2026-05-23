@@ -1,9 +1,8 @@
 import { useState } from "react";
 
 import Sidebar from "./Components/Sidebar";
-import PersonalInfo from "./components/PersonalInfo";
-import EditForm from "./components/EditForm";
-import Skills from "./Components/Skills"
+import PersonalInfo from "./Components/PersonalInfo";
+import EditForm from "./Components/EditForm";
 
 function App() {
 
@@ -12,8 +11,8 @@ function App() {
   const [user, setUser] = useState({
     name: "Malaika Zafar",
     email: "abc@gmail.com",
-    phone: "+92 123456789",
-    DateOfBirth: "12-May-2005",
+    phone: "92123456789",
+    dob: "2005-05-12",
     skills: "React, Tailwind CSS",
     address: "Lahore, Pakistan",
     bio: "I am a passionate Frontend Developer . I enjoy creating responsive and user-friendly websites with clean and modern designs. I am continuously learning new technologies to improve my development skills.",
@@ -50,16 +49,16 @@ function App() {
 
         {
           showForm ? (
-            <EditForm
-              user={user}
-              setUser={setUser}
-              setShowForm={setShowForm}
-            />
-          ) : (
-            <PersonalInfo
-              user={user}
-              setShowForm={setShowForm}
-            />
+          <EditForm
+            user={user}
+            setUser={setUser}
+            setShowForm={setShowForm}
+          />
+        ) : (
+          <PersonalInfo
+            user={user}
+            setShowForm={setShowForm}
+          />
 
           )
         }
