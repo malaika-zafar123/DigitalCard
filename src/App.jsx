@@ -1,9 +1,9 @@
 import { useState } from "react";
 
 import Sidebar from "./Components/Sidebar";
-import PersonalInfo from "./components/PersonalInfo";
-import EditForm from "./components/EditForm";
-import Skills from "./Components/Skills"
+import PersonalInfo from "./Screen/PersonalInfo";
+import EditForm from "./Screen/EditForm";
+
 
 function App() {
 
@@ -13,13 +13,56 @@ function App() {
     name: "Malaika Zafar",
     email: "abc@gmail.com",
     phone: "+92 123456789",
-    DateOfBirth: "12-May-2005",
-    skills: "React, Tailwind CSS",
-    address: "Lahore, Pakistan",
-    bio: "I am a passionate Frontend Developer . I enjoy creating responsive and user-friendly websites with clean and modern designs. I am continuously learning new technologies to improve my development skills.",
+    DateOfBirth: "2006-01-01",
+
+    skills: [
+
+      {
+        name: "React",
+        image:
+          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+      },
+
+      {
+        name: "JavaScript",
+        image:
+          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+      },
+
+      {
+        name: "Tailwind CSS",
+        image:
+          "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg",
+      },
+
+      {
+        name: "HTML",
+        image:
+          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+      },
+
+      {
+        name: "CSS",
+        image:
+          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+      },
+
+      {
+        name: "GitHub",
+        image:
+          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+      },
+
+    ],
+
+    address: "SDK, Pakistan",
+
+    bio: "I am a passionate Frontend Developer.I am continuously learning new technologies to improve my development skills.",
+
     image:
-      "https://plus.unsplash.com/premium_photo-1679064458881-76904cf6d1aa?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8aGlqYWJpJTIwZ2lybHxlbnwwfHwwfHx8MA%3D%3D",
+      "https://plus.unsplash.com/premium_photo-1679064458881-76904cf6d1aa?w=500",
   });
+
 
   return (
     <div className="

@@ -1,3 +1,5 @@
+import Input from "../Components/UI/Input";
+
 function EditForm({
   user,
   setUser,
@@ -14,6 +16,24 @@ function EditForm({
     });
   };
 
+  const handleSave = () => {
+    if (!user.email.includes("@")){
+      alert("Invalid Email");
+      return
+    }
+
+    if (user.phone.length < 11){
+      alert("Phone number must be 11 digits");
+      return
+    }
+
+    if (!user.DateOfBirth){
+      alert("Enter your Date of Birth ");
+      return
+    }
+    setShowForm(false);
+  };
+
   return (
     <div className="flex-1 p-8">
 
@@ -27,7 +47,8 @@ function EditForm({
       </h1>
 
       <div className="
-      grid
+      grid 
+      lg:grid-cols-2
       md:grid-cols-2
       gap-5
       ">
@@ -55,9 +76,10 @@ function EditForm({
 
         <Input
           label="Date Of Birth"
-          name="dob"
-          value={user.dob}
+          name="Date of Birth"
+          value={user.DateOfBirth}
           onChange={handleChange}
+          type="date"
         />
 
         <Input
@@ -113,7 +135,7 @@ function EditForm({
       <div className="flex gap-4 mt-6">
 
         <button
-          onClick={() => setShowForm(false)}
+          onClick={handleSave}
           className="
           bg-gradient-to-r
           from-violet-600
@@ -133,38 +155,38 @@ function EditForm({
   );
 }
 
-function Input({
-  label,
-  name,
-  value,
-  onChange,
-}) {
+// function Input({
+//   label,
+//   name,
+//   value,
+//   onChange,
+// }) {
 
-  return (
-    <div>
+//   return (
+//     <div>
 
-      <label className="text-gray-300">
-        {label}
-      </label>
+//       <label className="text-gray-300">
+//         {label}
+//       </label>
 
-      <input
-        type="text"
-        name={name}
-        value={value}
-        onChange={onChange}
-        className="
-        w-full
-        mt-2
-        p-4
-        rounded-2xl
-        bg-[#0F172A]
-        text-white
-        outline-none
-        "
-      />
+//       <input
+//         type="text"
+//         name={name}
+//         value={value}
+//         onChange={onChange}
+//         className="
+//         w-full
+//         mt-2
+//         p-4
+//         rounded-2xl
+//         bg-[#0F172A]
+//         text-white
+//         outline-none
+//         "
+//       />
 
-    </div>
-  );
-}
+//     </div>
+//   );
+// }
 
 export default EditForm;
